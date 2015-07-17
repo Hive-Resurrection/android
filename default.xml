@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+  <remote name="github"
+          fetch="https://github.com/" />
+
+  <remote name="cm"
+          fetch="https://github.com/CyanogenMod/" />
+
+  <remote name="bb"
+          fetch="https://bitbucket.org/" />
+
   <remote  name="aosp"
-           fetch=".." />
-  <default revision="refs/tags/android-5.1.1_r5"
+           fetch="https://android.googlesource.com"
+           review="android-review.googlesource.com" />
+  <default revision="refs/tags/android-5.1.1_r8"
            remote="aosp"
            sync-j="4" />
+
+
 
   <project path="build" name="platform/build" groups="pdk,tradefed" >
     <copyfile src="core/root.mk" dest="Makefile" />
